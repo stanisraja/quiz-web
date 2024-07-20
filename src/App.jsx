@@ -1,16 +1,12 @@
 import React from 'react'
 import Quiz from './Components/Quiz/Quiz'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-
-function App() {
+const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/quiz" element={<Quiz />} />
-      </Routes>
-    </Router>
-  );
+    <>
+      <Quiz/>
+    </>
+  )
 }
 
 export default App
