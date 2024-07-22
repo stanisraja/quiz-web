@@ -20,7 +20,7 @@ const Quiz = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get('../../../build/api/fetchData', {
+        const response = await axios.get('../../../api/fetchData', {
           params: { limit: 5 }
         });
         setQuestions(response.data);
@@ -77,7 +77,7 @@ const Quiz = () => {
   const reset = () => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get('../../../build/api/fetchData');
+        const response = await axios.get('../../../api/fetchData');
         setQuestions(response.data);
         setCurrentQuestionIndex(0);
         setScore(0);
