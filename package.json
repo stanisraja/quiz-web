@@ -3,7 +3,6 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://stanisraja.github.io/quiz-web",
   "dependencies": {
     "axios": "^0.21.1",
     "cors": "^2.8.5",
@@ -21,7 +20,7 @@
     "deploy": "main -d build -x node_modules -x src -x public"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3",
+    "main": "^3.2.3",
     "react-app-rewired": "^2.2.1"
   },
   "browserslist": {
