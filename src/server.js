@@ -2,6 +2,7 @@
 import express from 'express';
 import { createConnection } from 'mysql2';
 import cors from 'cors'; // For cross-origin requests
+require('dotenv').config();
 
 const app = express();
 const port = 5000;
@@ -10,7 +11,7 @@ const port = 5000;
 const connection = createConnection({
   host: 'jolly-swipe.cy4h7sgs7wuj.us-east-1.rds.amazonaws.com',
   user: 'dataload',
-  password: 'Awiwpsk#89KJ8',
+  password: process.env.DB_PASSWORD,
   database: 'jolly-swipe',
   port: 3306
 });
