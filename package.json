@@ -12,10 +12,10 @@
     "react-scripts": "^4.0.3"
   },
   "scripts": {
-    "start": "EXPORT NODE_OPTIONS=--openssl-legacy-provider && react-scripts --openssl-legacy-provider start",
-    "build": "EXPORT NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
-    "test": "EXPORT NODE_OPTIONS=--openssl-legacy-provider && react-scripts test",
-    "eject": "EXPORT NODE_OPTIONS=--openssl-legacy-provider && react-scripts eject",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "main -d build -x node_modules -x src -x public"
   },
