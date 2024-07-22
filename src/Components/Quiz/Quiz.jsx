@@ -20,14 +20,10 @@ const Quiz = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/questions', {
-          params: { limit: 5 }
-        });
+        const response = await axios.get('/api/fetchData');
         setQuestions(response.data);
-        //setLoading(false); 
       } catch (error) {
         console.error('Error fetching questions:', error);
-        //setLoading(false); 
       }
     };
 
