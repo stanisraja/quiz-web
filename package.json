@@ -20,7 +20,6 @@
     "deploy": "main -d build -x node_modules -x src -x public"
   },
   "devDependencies": {
-    "main": "^3.2.3",
     "react-app-rewired": "^2.2.1"
   },
   "browserslist": {
