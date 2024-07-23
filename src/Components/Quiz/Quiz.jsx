@@ -21,12 +21,13 @@ const Quiz = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
+        console.log('Fetching data from:', fetchData);
         const response = await axios.get(fetchData, {
           params: { limit: 5 }
         });
         setQuestions(response.data);
       } catch (error) {
-        console.error('Error fetching questions:', error);
+        console.log('Error fetching questions:', error);
       }
     };
 
