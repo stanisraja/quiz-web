@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios'; // For making HTTP requests
 import './Quiz.css'
+import fetchData from '../../api/fetchData';
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
@@ -20,7 +21,7 @@ const Quiz = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get('../../../api/fetchData', {
+        const response = await axios.get(fetchData, {
           params: { limit: 5 }
         });
         setQuestions(response.data);
@@ -77,7 +78,7 @@ const Quiz = () => {
   const reset = () => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get('../../../api/fetchData');
+        const response = await axios.get('fetchData');
         setQuestions(response.data);
         setCurrentQuestionIndex(0);
         setScore(0);
