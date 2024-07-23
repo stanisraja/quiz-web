@@ -1,3 +1,4 @@
+// api/questions.js
 import { createConnection } from 'mysql2/promise';
 
 const connectionConfig = {
@@ -8,7 +9,7 @@ const connectionConfig = {
   port: 3306
 };
 
-async function fetchData(req, res) {
+export default async function handler(req, res) {
   let connection;
   try {
     connection = await createConnection(connectionConfig);
@@ -24,5 +25,3 @@ async function fetchData(req, res) {
     }
   }
 }
-
-export default fetchData;

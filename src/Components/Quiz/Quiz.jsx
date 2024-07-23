@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios'; // For making HTTP requests
 import './Quiz.css'
-import fetchData from '../../api/fetchData';
+
 
 const Quiz = () => {
   const [questions, setQuestions] = useState([]);
@@ -21,12 +21,12 @@ const Quiz = () => {
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get(fetchData, {
+        const response = await axios.get('/api/questions', {
           params: { limit: 5 }
         });
         setQuestions(response.data);
       } catch (error) {
-        console.error('Error fetching questions:', error);
+        console.log('Error fetching questions:', error);
       }
     };
 
@@ -78,7 +78,7 @@ const Quiz = () => {
   const reset = () => {
     const fetchQuestions = async () => {
       try {
-        const response = await axios.get('fetchData');
+        const response = await axios.get('/api/questions');
         setQuestions(response.data);
         setCurrentQuestionIndex(0);
         setScore(0);
