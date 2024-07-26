@@ -32,6 +32,11 @@ function HomePage() {
           </div>
         ))}
       </div>
+      <div>
+        <a href="https://quiz.yourdomain.com" className="start-quiz-link">
+          Start Quiz
+        </a>
+      </div>
     </div>
   );
 }
