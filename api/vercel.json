@@ -1,0 +1,15 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/Components/Quiz/Quiz.jsx",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "build"
+        }
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/src/Components/Quiz/Quiz.jsx" }
+    ]
+  }
