@@ -1,5 +1,7 @@
 import { createConnection } from 'mysql2/promise';
 
+console.log('API route hit:', req.url);
+
 const connectionConfig = {
   host: process.env.MYSQL_HOST,
   user: process.env.MYSQL_USER,
