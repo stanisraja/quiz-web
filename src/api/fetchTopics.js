@@ -8,6 +8,7 @@ const connectionConfig = {
   port: 3306
 };
 
+console.log(connectionConfig.user)
 async function fetchData(req, res) {
   let connection;
   try {
