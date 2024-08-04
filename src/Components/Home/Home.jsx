@@ -1,23 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios'; // For making HTTP requests
+import './Home.css'
 
 function HomePage() {
   const [topics, setTopics] = useState([]);
 
   useEffect(() => {
-    // Fetch the topics from an API or any other data source
     const fetchTopics = async () => {
       try {
-        const response = await fetch('/api/topics');
-        const data = await response.json();
-        setTopics(data);
+        const response = await axios.get('/api/topics', {
+          params: { limit: 5 }
+        });
+        setTopics(response.data);
       } catch (error) {
-        console.error('Error fetching topics:', error);
+        console.log('Error fetching topics:', error);
       }
     };
 
     fetchTopics();
   }, []);
 
+
+  console.log(topics);
   
   return (
     <div className="home-page">
@@ -28,7 +32,7 @@ function HomePage() {
             key={index}
             className={`topic ${index % 2 === 0 ? 'flashing' : ''}`}
           >
-            {topic.name}
+            {topics.name}
           </div>
         ))}
       </div>
