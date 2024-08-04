@@ -9,7 +9,7 @@ const connectionConfig = {
 };
 
 console.log(connectionConfig.user)
-async function fetchData(req, res) {
+async function topics(req, res) {
   let connection;
   try {
     connection = await createConnection(connectionConfig);
@@ -26,4 +26,6 @@ async function fetchData(req, res) {
   }
 }
 
-export default fetchData;
+export default topics;
+
+
