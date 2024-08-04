@@ -4,6 +4,7 @@ import './Home.css'
 
 function HomePage() {
   const [topics, setTopics] = useState([]);
+  const [currentTopicIndex, setCurrentTopicIndex] = useState(0);
 
   useEffect(() => {
     const fetchTopics = async () => {
@@ -21,7 +22,7 @@ function HomePage() {
   }, []);
 
 
-  const currenttopic = topics[0];
+  const currenttopic = topics[currentTopicIndex];
 
   console.log(currenttopic)
   
