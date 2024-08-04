@@ -8,8 +8,8 @@ const connectionConfig = {
   port: 3306
 };
 
-console.log(connectionConfig.user)
-async function topics(req, res) {
+
+export default async function handler(req, res) {
   let connection;
   try {
     connection = await createConnection(connectionConfig);
@@ -25,7 +25,3 @@ async function topics(req, res) {
     }
   }
 }
-
-export default topics;
-
-
