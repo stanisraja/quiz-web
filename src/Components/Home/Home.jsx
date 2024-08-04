@@ -21,7 +21,9 @@ function HomePage() {
   }, []);
 
 
-  console.log(topics);
+  const currenttopic = topics[0];
+
+  console.log(currenttopic)
   
   return (
     <div className="home-page">
@@ -32,7 +34,7 @@ function HomePage() {
             key={index}
             className={`topic ${index % 2 === 0 ? 'flashing' : ''}`}
           >
-            {topics.name}
+            {currenttopic.NAME}
           </div>
         ))}
       </div>
