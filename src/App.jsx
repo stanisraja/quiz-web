@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './Components/Home/Home';
 import Quiz from './Components/Quiz/Quiz'
 
+
 const App = () => {
   return (
     <Router>

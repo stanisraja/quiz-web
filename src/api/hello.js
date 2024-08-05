@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from 'react';
 
 const Home = () => {
@@ -10,3 +11,10 @@ const Home = () => {
 };
 
 export default Home;
+=======
+export default function handler(req, res) {
+    res.status(200).json({ message: 'Hello from API' });
+  }
+
+  
+>>>>>>> Stashed changes
