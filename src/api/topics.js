@@ -1,5 +1,7 @@
 import { createConnection } from 'mysql2/promise';
 
+console.log('API route hit:', req.url);
+
 const connectionConfig = {
   host: process.env.MYSQL_HOST,
   user: process.env.MYSQL_USER,
@@ -8,7 +10,8 @@ const connectionConfig = {
   port: 3306
 };
 
-async function fetchData(req, res) {
+
+export default async function handler(req, res) {
   let connection;
   try {
     connection = await createConnection(connectionConfig);
@@ -24,5 +27,3 @@ async function fetchData(req, res) {
     }
   }
 }
-
-export default fetchData;
