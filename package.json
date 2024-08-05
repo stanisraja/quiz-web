@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": ".",
+  "homepage": "domain-quiz-web.vercel.app",
   "dependencies": {
     "axios": "^0.21.1",
     "cors": "^2.8.5",
