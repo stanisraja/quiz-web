@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Home.css'
 
-function HomePage() {
+function Home() {
   const [topics, setTopics] = useState([]);
   const [error, setError] = useState(null);
 
@@ -46,4 +46,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Home;
